@@ -21,13 +21,5 @@ COPY ./nginx.conf /etc/nginx/conf.d
 # 80 포트 오픈
 EXPOSE 80 443
 
-FROM jenkins/jenkins:lts-jdk17
-USER root
-RUN apt-get update \
- && DEBIAN_FRONTEND=noninteractive \
-    apt-get install --no-install-recommends --assume-yes \
-      docker.io
-USER jenkins
-
 # container 실행 시 자동으로 실행할 command. nginx 시작
 CMD ["nginx", "-g", "daemon off;"]
