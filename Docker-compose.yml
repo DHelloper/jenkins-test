@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  jenkins-container:
+    build: .
+    # no image:
+    volumes:
+      - ./data:/var/jenkins_home
+      # but not /usr/bin/docker
