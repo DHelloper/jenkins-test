@@ -4,7 +4,7 @@
 FROM nginx:latest
 
 # work dir
-WORKDIR /home/test/client
+WORKDIR /react
 
 # work dir 에 build 폴더 생성 : /home/test/client/build
 RUN mkdir ./build
