@@ -1,7 +1,7 @@
 ## Dockerfile(client)
 
 # nginx 이미지를 사용
-FROM nginx:latest
+FROM nginx
 
 # work dir
 WORKDIR /react
