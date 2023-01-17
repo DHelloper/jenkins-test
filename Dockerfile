@@ -1,7 +1,7 @@
 ## Dockerfile(client)
 
 # nginx 이미지를 사용
-FROM nginx
+FROM nginx:latest
 
 # work dir
 WORKDIR /home/test/client
@@ -16,7 +16,7 @@ ADD ./build ./build
 RUN rm /etc/nginx/conf.d/default.conf
 
 # host pc 의 nginx.conf 를 복사
-COPY ./nginx.conf /etc/nginx/conf.d
+COPY ./default.conf /etc/nginx/conf.d
 
 # 80 포트 오픈
 EXPOSE 80
